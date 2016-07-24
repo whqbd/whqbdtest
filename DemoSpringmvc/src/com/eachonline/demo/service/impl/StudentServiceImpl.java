@@ -2,12 +2,10 @@ package com.eachonline.demo.service.impl;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.eachonline.demo.dao.StudnetMapper;
+import com.eachonline.demo.dao.StudentMapper;
 import com.eachonline.demo.mode.Student;
 import com.eachonline.demo.service.StudentService;
 
@@ -15,12 +13,12 @@ import com.eachonline.demo.service.StudentService;
 public class StudentServiceImpl implements StudentService {
 
 	@Autowired
-	private StudnetMapper studnetMapper;
+	private StudentMapper studentMapper;
 	
 	@Override
 	public Student getStudent(String studentID) {
 		// TODO Auto-generated method stub
-		return studnetMapper.getStudent(studentID);
+		return studentMapper.getStudent(studentID);
 	}
 
 	@Override
@@ -32,13 +30,14 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public List<Student> getStudentAll() {
 		// TODO Auto-generated method stub
-		return studnetMapper.getStudentAll();
+		return studentMapper.getStudentAll();
 	}
 
 	@Override
 	public int insertStudent(Student entity) {
 		// TODO Auto-generated method stub
-		return 0;
+		int code=studentMapper.insertStudent(entity);
+		return code;
 	}
 
 	@Override

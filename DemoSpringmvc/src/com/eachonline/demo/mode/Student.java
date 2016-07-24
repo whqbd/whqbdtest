@@ -10,7 +10,7 @@ public class Student implements Serializable {
 	private static final long serialVersionUID = 4324812509655854565L;
 
 	
-	private int id;
+	private String id;
 	private String stuName;
 	private int age;
 	private int gender;
@@ -22,37 +22,26 @@ public class Student implements Serializable {
 		super();
 	}
 
-	
-	
-	public int getId() {
+
+	public String getId() {
 		return id;
 	}
 
-
-
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-
-
 
 	public String getStuName() {
 		return stuName;
 	}
 
-
-
 	public void setStuName(String stuName) {
 		this.stuName = stuName;
 	}
 
-
-
 	public int getAge() {
 		return age;
 	}
-
-
 
 	public void setAge(int age) {
 		this.age = age;
@@ -83,8 +72,7 @@ public class Student implements Serializable {
 	}
 
 
-
-	public Student(int id, String stuName, int age, int gender, String address) {
+	public Student(String id, String stuName, int age, int gender, String address) {
 		super();
 		this.id = id;
 		this.stuName = stuName;
@@ -92,6 +80,7 @@ public class Student implements Serializable {
 		this.gender = gender;
 		this.address = address;
 	}
+
 
 	@Override
 	public String toString() {

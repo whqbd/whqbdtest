@@ -5,7 +5,7 @@ import java.util.List;
 import com.eachonline.demo.mode.Student;
 
 
-public interface StudnetMapper {
+public interface StudentMapper {
 	public Student  getStudent(String studentID);  
     
     public Student  getStudentAndClass(String studentID);  
