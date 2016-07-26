@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -47,7 +48,8 @@ public class StudentControl {
 	 * @return
 	 */
 	@RequestMapping(value="/addStudent",method=RequestMethod.POST)
-	public ModelAndView addStudent(HttpServletRequest request,HttpServletResponse response){
+	@ResponseBody
+	public JsonResult addStudent(HttpServletRequest request,HttpServletResponse response){
 		JsonResult result=new JsonResult();
 	
 		try {
@@ -66,16 +68,15 @@ public class StudentControl {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error(">>>>>>>>>>>error>>>e"+e);
-			result.setCode("2000");
+			result.setCode("5000");
 			result.setMessage("ok");
 		}
-		return new ModelAndView("../../success");
+		return result;
 	}
 	
 	@RequestMapping(value="/saveStudent",method=RequestMethod.POST)
 	public ModelAndView saveStudent(HttpServletRequest request,HttpServletResponse response){
 		Result result=new Result();
-	
 		try {
 			String name=request.getParameter("name");
 			String ageStr=request.getParameter("age");
