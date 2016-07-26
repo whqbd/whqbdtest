@@ -67,6 +67,7 @@ public class StudentControl {
 			logger.error(">>>>>>>>>>>保存成功>>>code"+code);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e);
 			logger.error(">>>>>>>>>>>error>>>e"+e);
 			result.setCode("5000");
 			result.setMessage("ok");

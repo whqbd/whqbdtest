@@ -35,7 +35,7 @@
         gender,
       </if>
       <if test="address != null" >
-        address,
+        address
       </if>
     </trim>
     values
@@ -53,7 +53,7 @@
         #{gender},
       </if>
       <if test="address != null" >
-        #{address},
+        #{address}
       </if>
       </trim>
 	</insert>
