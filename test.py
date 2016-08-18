@@ -146,4 +146,37 @@ print('a的排序前的值',a);
 a.sort();
 print('a的排序后的值',a)
 b='abc';
-b.re
+print("Python内置了很多有用的函数，我们可以直接调用。");
+
+print('abs() 函数 返回绝对值',abs(1));
+print('max(1,2,3,4) 函数 返回最大值',max(1,2,3,4));
+print('数据类型转换 int(\'123\') float(\'12.34\') str(100) bool' );
+
+print('hex() 转换16进制', hex(1111));
+
+#先用more test.py 导入test 再用from test import my_abs  最后调用 my_abs()函数
+
+def my_abs(x):
+	if not isinstance(x,int,float):
+		raise TypeError("type Error")
+	if x>=0:
+		return x
+	else:
+		return -x
+
+#定义一个空函数
+def nop():
+	pass
+#d定义函数返回多个值
+#>>> import math
+# >>> def move(x,y,step,angle=0):
+# ...     nx=x+step*math.cos(angle)
+# ...     ny=y-step*math.sin(angle)
+# ...     return nx,ny
+
+# ...！！！！！！！！！！！！！！
+# >>> x,y=move(100,100,60,math.pi / 6)
+# >>> print(x,y)
+# 151.96152422706632 70.0
+# >>>
+
