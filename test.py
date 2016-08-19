@@ -180,3 +180,27 @@ def nop():
 # 151.96152422706632 70.0
 # >>>
 
+
+#定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个*号
+# >>> def calc(*numbers):
+# ...     sum=0
+# ...     for n in numbers:
+# ...             sum=sum+n*n
+# ...     return sum
+# ...
+# >>> calc(2,3)
+# 13
+
+# >>> def calc(*numbers):
+# ...     sum=0
+# ...     for n in numbers:
+# ...             sum=sum+n*n
+# ...     return sum
+# ...
+# >>> calc(2,3)
+
+# >>> def person(name,age,**kw):
+# ...     print('name:',name,'age:',age,'other:',kw)
+# ...
+# >>> person('aaa',12,aaa='bbbb')
+# name: aaa age: 12 other: {'aaa': 'bbbb'}
